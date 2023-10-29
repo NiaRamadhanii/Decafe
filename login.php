@@ -27,7 +27,7 @@
 
 <body class="text-center">
     <main class="form-signin w-100 m-auto">
-        <form class="needs-validation" novalidate action="proses/proseslogin.php" method="POST">
+        <form class="needs-validation" novalidate action="proses/proses_login.php" method="POST">
             <i class="bi bi-cup-hot fs-1"></i>
             <h1 class="h3 mb-3 fw-normal">Please Login</h1>
 
@@ -52,7 +52,7 @@
                     Remember me
                 </label>
             </div>
-            <button class="btn btn-primary w-100 py-2" type="submit_validate" value="abc">Login</button>
+            <button class="btn btn-primary w-100 py-2" type="submit" name="submit_validate" value="abc">Login</button>
             <p class="mt-5 mb-3 text-body-secondary">&copy; 2023</p>
         </form>
     </main>

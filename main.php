@@ -1,3 +1,14 @@
+<?php
+//session_start();
+if (empty($_SESSION["username_decafe"])){
+  header('location:../login');
+}
+include "proses/connect.php";
+$query = mysqli_query($conn, "SELECT * FROM tb_user WHERE username = '$_SESSION[username_decafe]'");
+$hasil = mysqli_fetch_assoc($query);
+
+
+?>
 <!doctype html>
 <html lang="en">
 
@@ -5,8 +16,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Decafe - Aplikasi Pemesanan Makanan Dan Minuman Cafe</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
@@ -20,7 +31,7 @@
       <?php include "sidebar.php"; ?>
       <!-- /end sidebar -->
       <?php
-        include $page;
+      include $page;
       ?>
       <!-- Content -->
 

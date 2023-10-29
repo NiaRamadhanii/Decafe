@@ -16,17 +16,22 @@
                       Dashboard</a>
                   </li>
                   <li class="nav-item">
+                    <a class="nav-link ps-2 <?php echo(isset($_GET['x']) && $_GET['x']=='menu') ? 'active link-light' : 'nav-link link-dark'; ?>" href="menu"><i class="bi bi-cart4"></i> Daftar menu </a>
+                  </li>
+                  <li class="nav-item">
                     <a class="nav-link ps-2 <?php echo(isset($_GET['x']) && $_GET['x']=='order') ? 'active link-light' : 'nav-link link-dark'; ?>" href="order"><i class="bi bi-cart4"></i> Order</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link ps-2 <?php echo(isset($_GET['x']) && $_GET['x']=='customer') ? 'active link-light' : 'nav-link link-dark'; ?>" href="customer"><i class="bi bi-person-fill"></i> Costumer</a>
-                  </li>
+                  </li> 
+                   <?php if($hasil['level']==1){ ?> 
                   <li class="nav-item">
-                    <a class="nav-link ps-2 <?php echo(isset($_GET['x']) && $_GET['x']=='product') ? 'active link-light' : 'nav-link link-dark'; ?>" href="product"><i class="bi bi-card-checklist"></i> Product</a>
+                    <a class="nav-link ps-2 <?php echo(isset($_GET['x']) && $_GET['x']=='user') ? 'active link-light' : 'nav-link link-dark'; ?>" href="user"><i class="bi bi-card-checklist"></i> User </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link ps-2 <?php echo(isset($_GET['x']) && $_GET['x']=='report') ? 'active link-light' : 'nav-link link-dark'; ?>" href="report"><i class="bi bi-file-earmark-bar-graph"></i> Report</a>
                   </li>
+                 <?php } ?>
                 </ul>
               </div>
             </div>
