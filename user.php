@@ -13,12 +13,12 @@ while ($record = mysqli_fetch_array($query)){
     <div class="card-body">
       <div class="row">
         <div class="col d-flex justify-content-end">
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="exampleModal">Tambah User</button>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalTambahUser">Tambah User</button>
         </div>
       </div>
 
       <!-- Modal tambah user baru -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="ModalTambahUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-fullscreen-md-down">
           <div class="modal-content">
             <div class="modal-header">
